@@ -1,0 +1,26 @@
+/* overall */
+body { font-face: sans-serif; margin: 0px;}
+button { border: 1px solid black; background: #ccc; font-size: large;}
+form, p, div { font-family: sans-serif;}
+
+#tabs { background: #ccc; padding-top: 10px; padding-left: 10px;}
+#tabs button { width: 140px; margin-right: 5px; height: 34px; border: 1px solid #ccc; border-bottom-right-radius: 0px; border-bottom-left-radius: 0px;}
+#content {padding: 20px; max-width: 500px;}
+#content h1 {margin-top: 0; font-size: x-large;}
+.current-tab { background: white; color: black; border-bottom: 1px solid white !important;}
+
+/* dialer */
+#number_input { font-size: large; text-align: right; width: 90%;}
+#dialer_pad button { margin-top: 10px; margin-right: 10px; width: 130px; height: 60px; font-size: x-large; }
+#dialer_controls button {margin-top: 14px; margin-right: 9px; width: 203px; height: 60px; font-size: large; vertical-align: middle;}
+
+/* contact list */
+#contact_list button { margin-top: 10px; height: 40px;}
+
+/* add contact */
+#content_add_contact label { margin-top: 20px;}
+#content_add_contact button { margin-top: 10px; margin-right: 10px;}
+#content_add_contact input { width: 300px;}
+
+/* images */
+.img { width: 100px; }

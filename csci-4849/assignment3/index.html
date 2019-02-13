@@ -1,0 +1,240 @@
+<html>
+  <head>
+    <title>Assignment 3</title>
+		<link rel="stylesheet" href="phone.css">
+  </head>
+  <body>
+	  <div id="tabs" role="navigation" aria-live="polite">
+		  <button id="tab_dialer" accesskey="a">Dialer</button>
+		  <button id="tab_contacts" accesskey="b">Contact List</button>
+      <button id="tab_add_contact" accesskey="c">Add Contact</button>
+      <button id="tab_help" accesskey="h">Help</button>
+	  </div>
+	  <div id="content" role="main">
+		  <div id="content_dialer">
+		      <h1>Dialer</h1>
+			  <form>
+				  <input id="number_input"/>
+			  </form>
+			  <div id="dialer_pad">
+				  <div>
+					  <button id="dialer1" accesskey="1">1</button>
+					  <button id="dialer2" accesskey="2">2</button>
+					  <button id="dialer3" accesskey="3">3</button>
+				  </div>
+				  <div>
+					  <button id="dialer4" accesskey="4">4</button>
+					  <button id="dialer5" accesskey="5">5</button>
+					  <button id="dialer6" accesskey="6">6</button>
+				  </div>
+				  <div>
+					  <button id="dialer7" accesskey="7">7</button>
+					  <button id="dialer8" accesskey="8">8</button>
+					  <button id="dialer9" accesskey="9">9</button>
+				  </div>
+				  <div>
+					  <button id="dialer_star" accesskey="*"> *</button>
+					  <button id="dialer0" accesskey="0">0</button>
+					  <button id="dialer_octothorpe" accesskey="#">#</button>
+				  </div>
+			  </div>
+			  <div id="dialer_controls">
+				  <button id="button_dial" accesskey="d">Dial</button>
+				  <button id="button_dialer_clear" accesskey="c">Clear</button>
+			  </div>
+		  </div>
+		  <div id="content_contacts">
+		      <h1>Contact List</h1>
+			  <div id="contact_list">
+          <table>
+            <tr>
+              <th>Name</th>
+              <th>Phone Number</th>
+              <th>Email</th>
+              <th>Image</th>
+            </tr>
+            <tr>
+              <td>Robert Drake</td>
+              <td>734 234-2342</td>
+              <td>robert@drake.com</td>
+              <td><img class="img" src="https://content-static.upwork.com/uploads/2014/10/02123010/profilephoto_goodcrop.jpg" alt="Robert Drake"></img></td>
+            </tr>
+            <tr>
+              <td>Emma Frost</td>
+              <td>355 532-2363</td>
+              <td>emma@frost.com</td>
+              <td><img class="img" src="https://www.macfound.org/media/fellows/profile_photos/stock_2013_profile-200.jpg" alt="Emma Frost"></img></td>
+            </tr>
+            <tr>
+              <td>Doreen Green</td>
+              <td>234 743-7324</td>
+              <td>doreen@green.com</td>
+              <td><img class="img" src="https://www.attractivepartners.co.uk/wp-content/uploads/2017/06/profile.jpg" alt="Doreen Green"></img></td>
+            </tr>
+            <tr>
+              <td>Jean Grey</td>
+              <td>385 356-2835</td>
+              <td>jean@grey.com</td>
+              <td><img class="img" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR6WQZSjH3muCXL85w_MqE3-d30Wk4ZGfxWnxGkakajfHSFAAU3" alt="Jean Grey"></img></td>
+            </tr>
+            <tr>
+              <td>James Howlett</td>
+              <td>384 283-2342</td>
+              <td>james@howlett.com</td>
+              <td><img class="img" src="https://cdn.business2community.com/wp-content/uploads/2014/04/profile-picture-300x300.jpg" alt="James Howlett"></img></td>
+            </tr>
+            <tr>
+              <td>Ororo Munroe</td>
+              <td>924 093-2373</td>
+              <td>ororo@munroe.com</td>
+              <td><img class="img" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSjOPfv1oZNIOBng1BaR7J1N7mZq0WOPf49IoF6FpBRGkstoxcEVQ" alt="Ororo Munroe"></img></td>
+            </tr>
+            <tr>
+              <td>Katherine Pryde</td>
+              <td>234 745-2356</td>
+              <td>katherine@pryde.com</td>
+              <td><img class="img" src="https://s3.amazonaws.com/aspph-wp-production/app/uploads/2016/09/Headshot_1_Jess-sexton-e1473780388822.jpg" alt="Katherine Pryde"></img></td>
+            </tr>
+            <tr>
+              <td>Piotr Rasputin</td>
+              <td>934 832-3452</td>
+              <td>piotr@rasputin.com</td>
+              <td><img class="img" src="https://d3hjf51r9j54j7.cloudfront.net/wp-content/uploads/sites/7/2017/11/Smurfit-Saverio-Mayer-web-550x330.jpg" alt="Piotr Rasputin"></img></td>
+            </tr>
+            <tr>
+              <td>Scott Summers</td>
+              <td>234 234-2352</td>
+              <td>scott@summers.com</td>
+              <td><img class="img" src="https://cdn.vox-cdn.com/thumbor/wI3iu8sNbFJSQB4yMLsoPMNzIHU=/0x0:3368x3368/1200x800/filters:focal(1188x715:1726x1253)/cdn.vox-cdn.com/uploads/chorus_image/image/62994726/AJ_Finn_author_photo_color_photo_courtesy_of_the_author.0.jpg" alt="Scott Summers"></img></td>
+            </tr>
+            <tr>
+              <td>Kurt Wagner</td>
+              <td>938 357-3673</td>
+              <td>kurt@wagner.com</td>
+              <td><img class="img" src="http://www.christopherxjjensen.com/wp-content/gallery/profile-pics/Profile-Pic_2014-09-07_1000px.jpg" alt="Kurt Wagner"></img></td>
+            </tr>
+            <tr>
+              <td>Warren Worthington</td>
+              <td>883 234-4567</td>
+              <td>warren@worthington.com</td>
+              <td><img class="img" src="https://www.miccostumes.com/images/character/Batman.jpg" alt="Warren Worthington"></img></td>
+            </tr>
+          </table>
+			  </div>
+		  </div>
+		  <div id="content_add_contact">
+			  <h1>Add Contact</h1>
+			  <form>
+					<div>
+				  <label for="name">Name</label>
+				  <input id="name" placeholder="Jane Smith">
+					</div>
+					<div>
+				  <label for="phone_number">Phone number</label>
+				  <input id="phone_number" placeholder="123-456-7890">
+					</div>
+				  <div>
+					<label for="email">Email address</label>
+				  <input id="email" placeholder="jane.smith@colorado.edu">
+					</div>
+			  </form>
+			  <button>Add Contact</button>
+			  <button id="button_add_clear">Clear</button>
+      </div>
+      <div id="content_help">
+        <h1>Accessibility Features</h1>
+        <ul>
+          <li>Tab controlled buttons</li>
+          <li>Keyboard shortcuts for buttons</li>
+          <li>Formatted content in tables</li>
+          <li>Help page</li>
+          <li>Captioned images</li>
+          <li>ARIA landmark roles</li>
+          <li>ARIA live regions</li>
+        </ul>
+        <h2>Keyboard Shortcuts</h2>
+        <table>
+          <tr>
+            <th>Name</th>
+            <th>Shortcut</th>
+          </tr>
+          <tr>
+            <td>Dialer Tab</td>
+            <td>[shortcut keystroke] + a</td>
+          </tr>
+          <tr>
+            <td>Contact List Tab</td>
+            <td>[shortcut keystroke] + b</td>
+          </tr>
+          <tr>
+            <td>Add Contact Tab</td>
+            <td>[shortcut keystroke] + c</td>
+          </tr>
+          <tr>
+            <td>Help Tab</td>
+            <td>[shortcut keystroke] + h</td>
+          </tr>
+          <tr>
+            <td>0 (Dialer)</td>
+            <td>[shortcut keystroke] + 0</td>
+          </tr>
+          <tr>
+            <td>1 (Dialer)</td>
+            <td>[shortcut keystroke] + 1</td>
+          </tr>
+          <tr>
+            <td>2 (Dialer)</td>
+            <td>[shortcut keystroke] + 2</td>
+          </tr>
+          <tr>
+            <td>3 (Dialer)</td>
+            <td>[shortcut keystroke] + 3</td>
+          </tr>
+          <tr>
+            <td>4 (Dialer)</td>
+            <td>[shortcut keystroke] + 4</td>
+          </tr>
+          <tr>
+            <td>5 (Dialer)</td>
+            <td>[shortcut keystroke] + 5</td>
+          </tr>
+          <tr>
+            <td>6 (Dialer)</td>
+            <td>[shortcut keystroke] + 6</td>
+          </tr>
+          <tr>
+            <td>7 (Dialer)</td>
+            <td>[shortcut keystroke] + 7</td>
+          </tr>
+          <tr>
+            <td>8 (Dialer)</td>
+            <td>[shortcut keystroke] + 8</td>
+          </tr>
+          <tr>
+            <td>9 (Dialer)</td>
+            <td>[shortcut keystroke] + 9</td>
+          </tr>
+          <tr>
+            <td>Dial (Dialer)</td>
+            <td>[shortcut keystroke] + d</td>
+          </tr>
+          <tr>
+            <td>Clear (Dialer)</td>
+            <td>[shortcut keystroke] + c</td>
+          </tr>
+          <tr>
+            <td>* (Dialer)</td>
+            <td>[shortcut keystroke] + *</td>
+          </tr>
+          <tr>
+            <td># (Dialer)</td>
+            <td>[shortcut keystroke] + #</td>
+          </tr>
+        </table>
+      </div>
+	  </div>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="phone.js"></script>
+  </body>
+</html>
