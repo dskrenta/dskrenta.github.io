@@ -142,7 +142,7 @@
 
       mouseX = data.x; //these x coordinates are relative to the viewport
       mouseY = data.y; //these y coordinates are relative to the viewport
-      // console.log(xprediction, yprediction, elapsedTime); //elapsed time is based on time since begin was called
+      console.log(data.x, data.y, elapsedTime); //elapsed time is based on time since begin was called
     }).begin();
   }
   else {
