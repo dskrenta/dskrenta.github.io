@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <title>Econ Sim</title>
+  </head>
+  <body>
+    <div class="jumbotron">
+      <h1 class="display-4">Econ Sim</h1>
+      <p class="lead">Enter your desired macroeconomic values and see the results below by running the simulator.</p>
+      <hr class="my-4">
+      <form id=input-form>
+        <div class="form-group">
+          <label>Initial Population Size</label>
+          <input type="number" class="form-control" data-param="initialPopulationSize" value="100">
+        </div>
+        <div class="form-group">
+          <label>Default Wealth Factor</label>
+          <input type="number" class="form-control" data-param="defaultWealthFactor" value="2500">
+          <small class="form-text text-muted">Determines the scale of wealth individuals start with</small>
+        </div>
+        <div class="form-group">
+          <label>Days of Execution</label>
+          <input type="number" class="form-control" data-param="daysOfExecution" value="365">
+        </div>
+        <div class="form-group">
+          <label>Marginal Propensity To Consume</label>
+          <input type="number" class="form-control" data-param="mpc" value="0.6">
+          <small class="form-text text-muted">Influence spending habbits (percentage as a decimal)</small>
+        </div>
+        <div class="form-group">
+          <label>Default Number Of Shares</label>
+          <input type="number" class="form-control" data-param="defaultNumberOfShares" value="1000000">
+          <small class="form-text text-muted">Amount of total shares companies should start with</small>
+        </div>
+        <div class="form-group">
+          <label>Default Price Per Square Foot</label>
+          <input type="number" class="form-control" data-param="defaultPricePerSquareFoot" value="123">
+        </div>
+        <div class="form-group">
+          <label>Hunger Factor Death</label>
+          <input type="number" class="form-control" data-param="defaultHungerFactor" value="30">
+          <small class="form-text text-muted">How many days individuals can go without eating before death</small>
+        </div>
+        <div class="form-group">
+          <label>Interest Rate</label>
+          <input type="number" class="form-control" data-param="interestRate" value="0.06">
+          <small class="form-text text-muted">(percentage as a decimal)</small>
+        </div>
+        <div class="form-group">
+          <label>Income Tax</label>
+          <input type="number" class="form-control" data-param="incomeTax" value="0.2">
+          <small class="form-text text-muted">(percentage as a decimal)</small>
+        </div>
+        <div class="form-group">
+          <label>Corporate Tax</label>
+          <input type="number" class="form-control" data-param="corporateTax" value="0.2">
+          <small class="form-text text-muted">(percentage as a decimal)</small>
+        </div>
+        <div class="form-group">
+          <label>Starting Government Wealth In Dollars</label>
+          <input type="number" class="form-control" data-param="defaultGovernmentWealth" value="0">
+        </div>
+      </form>
+      <a class="btn btn-primary btn-lg" id="run-button" role="button">Run</a>
+    </div>
+    <div id="stats-table"></div>
+    <div id="companies-table"></div>
+    <div id="people-table"></div>
+    <div id="orders-table"></div>
+
+    <!-- JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="lib/random-js.min.js"></script>
+    <script src="lib/prob.js"></script>
+    <script src="lib/faker.min.js"></script>
+    <script src="sim.js"></script>
+  </body>
+</html>
