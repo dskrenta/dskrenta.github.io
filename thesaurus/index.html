@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, viewport-fit=cover">
+    <meta name="theme-color" content="#000000">
+    <title>Thesaurus</title>
+  <body>
+    <h1>Thesaurus</h1>
+
+    <form id="input-form">
+      <input type="text" placeholder="Enter word" id="text-input" autocomplete="off" autocapitalize="false" autofocus="true"/>
+      <button type="submit">Search</button>
+    </form>
+
+    <div id="content"></div>
+
+    <script type="text/javascript">
+      (async () => {
+        'use strict';
+
+        async function initData() {
+          try {
+            const data = await fetch('en_thesaurus.json');
+            const text = await data.text();
+            return JSON.parse(text);
+          }
+          catch (error) {
+            cosole.error('initData error', error);
+          }
+        }
+
+        const data = await initData();
+
+        function lookupWord(word) {
+          for (let entry of data) {
+            if (entry.word.toLowerCase() === word.toLowerCase()) {
+              return entry;
+            }
+          }
+          return false;
+        }
+
+        const inputElement = document.getElementById('text-input');
+        const inputForm = document.getElementById('input-form');
+        const contentElement = document.getElementById('content');
+
+        inputForm.addEventListener('submit', (event) => {
+          event.preventDefault();
+
+          const query = inputElement.value;
+          const result = lookupWord(query);
+
+          if (result) {
+            contentElement.innerHTML = `
+              <p><strong>${result.pos}</strong></p>
+              ${result.synonyms.map(item => `<p>${item}</p>`).join('')}
+            `;
+          }
+          else {
+            contentElement.innerHTML = `
+              <p>Word <strong>${query}</strong> not found, try something else.</p>
+            `;
+          }
+        })
+      })();
+    </script>
+  </body>
+</html>
