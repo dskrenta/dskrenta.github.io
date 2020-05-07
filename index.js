@@ -1,6 +1,11 @@
 (() => {
   'use strict';
 
+  // HTML elements
+  const terminalFormElement = document.getElementById('terminal-form');
+  const terminalInputElement = document.getElementById('terminal-input');
+  const terminalContentElement = document.getElementById('terminal-content');
+
   // Utility for passing args to command functions
   const generateResolver = (func) => (inStr, args) => func(inStr, args);
 
@@ -35,11 +40,6 @@
     `;
   }
 
-  // HTML elements
-  const terminalFormElement = document.getElementById('terminal-form');
-  const terminalInputElement = document.getElementById('terminal-input');
-  const terminalContentElement = document.getElementById('terminal-content');
-
   // Refocus terminal input element on blur
   terminalInputElement.addEventListener('blur', () => {
     terminalInputElement.focus();
@@ -61,6 +61,9 @@
 
     // Set terminal input element value to null
     terminalInputElement.value = null;
+
+    // Scroll to bottom of page
+    window.scrollTo(0, document.body.scrollHeight);
   });
 
   // Parse user input
