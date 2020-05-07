@@ -72,7 +72,7 @@
     const args = input.split(' ');
 
     // Set default output
-    let output = '*** Unrecognized command ***';
+    let output = 'Unrecognized command, type help to list commands.';
 
     // Command exists in commands
     if (args[0] in commands) {
