@@ -4,3 +4,23 @@ body {
   background-color: black;
   color: greenyellow;
 }
+
+.terminal-input, .terminal-input:focus {
+  background-color: transparent;
+  font-style: normal;
+  color: greenyellow;
+  font-family: monospace;
+  outline: none;
+  border: none;
+  border-width: 0px;
+  width: 100%;
+}
+
+.terminal-content {
+  word-wrap: break-word;
+}
+
+.terminal-table, tr, td {
+  border-collapse: collapse;
+  border: 1px solid greenyellow;
+}
