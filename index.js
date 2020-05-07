@@ -7,7 +7,7 @@
   const terminalContentElement = document.getElementById('terminal-content');
 
   // Utility for passing args to command functions
-  const generateResolver = (func) => (inStr, args) => func(inStr, args);
+  const generateResolver = (func) => (inputStr, args) => func({ inputStr, args });
 
   // Commands supported by the system
   const commands = {
@@ -18,10 +18,14 @@
     'foo': {
       func: generateResolver(() => 'Foo!'),
       description: 'Foo!'
+    },
+    'clear': {
+      func: generateResolver(() => removeChildren(terminalContentElement)),
+      description: 'Clear terminal'
     }
   };
 
-  function help(inStr, args) {
+  function help() {
     return `
       <table class="terminal-table">
         <tr>
@@ -50,14 +54,20 @@
     // Prevent default behavior for submit event
     event.preventDefault();
 
-    // Append new content to terminal
-    terminalContentElement.insertAdjacentHTML(
-      'beforeend',
-      `
-        <p>${terminalInputElement.value}</p>
-        <p>${parse(terminalInputElement.value)}</p>
-      `
-    );
+    // Output from command function
+    const output = parse(terminalInputElement.value);
+
+    // If output is defined by command function
+    if (output) {
+      // Append new content to terminal
+      terminalContentElement.insertAdjacentHTML(
+        'beforeend',
+        `
+          <p>${terminalInputElement.value}</p>
+          <p>${output}</p>
+        `
+      );
+    }
 
     // Set terminal input element value to null
     terminalInputElement.value = null;
@@ -84,5 +94,11 @@
     }
 
     return output;
+  }
+
+  function removeChildren(parent) {
+    while (parent.firstChild) {
+      parent.firstChild.remove();
+    }
   }
 })();
