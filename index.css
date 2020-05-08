@@ -4,6 +4,7 @@ body {
   background-color: black;
   color: greenyellow;
   font-size: medium;
+  font-weight: bold;
 }
 
 .terminal-input, .terminal-input:focus {
@@ -17,6 +18,7 @@ body {
   width: 100%;
   font-size: medium;
   padding: 0px;
+  font-weight: bold;
 }
 
 .terminal-content {
@@ -30,10 +32,12 @@ body {
 
 a {
   color: greenyellow;
+  text-decoration: none;
+  border-bottom: 1px solid;
+  margin-top: 0px;
 }
 
 a:hover {
-  font-weight: bold;
   border-bottom: 5px solid;
 }
 
@@ -45,6 +49,6 @@ a:hover {
 
 .header-text {
   /* font-size: 2em; */
-  font-size: x-large;
+  font-size: xx-large;
   font-weight: bold;
 }
