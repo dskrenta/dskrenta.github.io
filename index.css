@@ -3,6 +3,7 @@ body {
   font-style: normal;
   background-color: black;
   color: greenyellow;
+  font-size: medium;
 }
 
 .terminal-input, .terminal-input:focus {
@@ -14,6 +15,8 @@ body {
   border: none;
   border-width: 0px;
   width: 100%;
+  font-size: medium;
+  padding: 0px;
 }
 
 .terminal-content {

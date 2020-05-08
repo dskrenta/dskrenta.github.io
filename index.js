@@ -74,7 +74,15 @@
   function template({ args }) {
     if (args.length > 1) {
       const templateKey = args[1];
-      return templates.find((item) => item === templateKey);
+      const foundTemplate = templates.find((item) => item === templateKey);
+
+      if (foundTemplate) {
+        const url = `https://github.com/dskrenta/${foundTemplate}`;
+        window.open(url, '_blank');
+        return `Opening: ${url}`;
+      }
+
+      return `Template: ${templateKey} does not exist.`;
     }
 
     return 'No template specificed, Usage: template template';
