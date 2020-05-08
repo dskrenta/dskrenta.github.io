@@ -77,7 +77,7 @@
       return templates.find((item) => item === templateKey);
     }
 
-    return 'No template specificed, Usage: template <template>';
+    return 'No template specificed, Usage: template template';
   }
 
   function ls({ inputStr, args }) {
@@ -93,7 +93,7 @@
       }
     }
 
-    return 'No file specified, Usage: cat <filename>';
+    return 'No file specified, Usage: cat filename';
   }
 
   function help() {
