@@ -27,3 +27,24 @@ body {
   border-collapse: collapse;
   border: 1px solid greenyellow;
 }
+
+a {
+  color: greenyellow;
+}
+
+a:hover {
+  font-weight: bold;
+  border-bottom: 5px solid;
+}
+
+.upper-link {
+  float: right;
+  font-size: x-large;
+  margin-left: 10px;
+}
+
+.header-text {
+  /* font-size: 2em; */
+  font-size: x-large;
+  font-weight: bold;
+}
