@@ -1,6 +1,6 @@
 # David's Personal Website
 
-(https://davidskrenta.com)[https://davidskrenta.com]
+[https://davidskrenta.com](https://davidskrenta.com)
 
 ## Development
 
