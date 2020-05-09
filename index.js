@@ -53,6 +53,18 @@
     'cal': {
       func: generateResolver(cal),
       description: 'Calculator'
+    },
+    'feedvix': {
+      func: generateResolver(() => {
+        window.open('http://feedvix.com', '_blank')
+      }),
+      description: `Open's Feedvix (David's feed)`
+    },
+    'wiki-random': {
+      func: generateResolver(() => {
+        window.open('https://en.wikipedia.org/wiki/Special:Random', '_blank')
+      }),
+      description: 'Open a random Wikipedia article'
     }
   };
 
