@@ -49,6 +49,10 @@
     'template': {
       func: generateResolver(template),
       description: 'Opens a new tab with desired template'
+    },
+    'cal': {
+      func: generateResolver(cal),
+      description: 'Calculator'
     }
   };
 
@@ -70,6 +74,14 @@
     'webrtc-mesh',
     'webrtc-sfu'
   ];
+
+  function cal({ args }) {
+    if (args.length > 1) {
+      return math.evaluate(args.slice(1).join(' '));
+    }
+
+    return 'No expression, usage: cal expression';
+  }
 
   function template({ args }) {
     if (args.length > 1) {
