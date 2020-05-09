@@ -50,15 +50,15 @@
       func: generateResolver(template),
       description: 'Opens a new tab with desired template'
     },
-    'cal': {
-      func: generateResolver(cal),
+    'calc': {
+      func: generateResolver(calc),
       description: 'Calculator'
     },
     'feedvix': {
       func: generateResolver(() => {
         window.open('http://feedvix.com', '_blank')
       }),
-      description: `Open's Feedvix (David's feed)`
+      description: `Opens Feedvix (David's feed)`
     },
     'wiki-random': {
       func: generateResolver(() => {
@@ -87,7 +87,7 @@
     'webrtc-sfu'
   ];
 
-  function cal({ args }) {
+  function calc({ args }) {
     if (args.length > 1) {
       return math.evaluate(args.slice(1).join(' '));
     }
