@@ -1,0 +1,54 @@
+body {
+  font-family: monospace;
+  font-style: normal;
+  background-color: black;
+  color: greenyellow;
+  font-size: medium;
+  font-weight: bold;
+}
+
+.terminal-input, .terminal-input:focus {
+  background-color: transparent;
+  font-style: normal;
+  color: greenyellow;
+  font-family: monospace;
+  outline: none;
+  border: none;
+  border-width: 0px;
+  width: 100%;
+  font-size: medium;
+  padding: 0px;
+  font-weight: bold;
+}
+
+.terminal-content {
+  word-wrap: break-word;
+}
+
+.terminal-table, tr, td {
+  border-collapse: collapse;
+  border: 1px solid greenyellow;
+}
+
+a {
+  color: greenyellow;
+  text-decoration: none;
+  border-bottom: 1px solid;
+  margin-top: 0px;
+}
+
+a:hover {
+  border-bottom: 5px solid;
+}
+
+.upper-link {
+  float: right;
+  font-size: x-large;
+  margin-left: 10px;
+}
+
+.header-text {
+  /* font-size: 2em; */
+  font-size: xx-large;
+  font-weight: bold;
+}
