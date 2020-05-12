@@ -42,7 +42,7 @@
       func: generateResolver(() => Date().toString()),
       description: 'Prints current date and time'
     },
-    'templates': {
+    'github-templates': {
       func: generateResolver(() => templates.map(template => `${template}\t`).join('')),
       description: `Prints David's Github templates`
     },
@@ -64,8 +64,59 @@
       func: generateResolver(() => {
         window.open('https://en.wikipedia.org/wiki/Special:Random', '_blank')
       }),
-      description: 'Open a random Wikipedia article'
+      description: 'Opens a random Wikipedia article'
+    },
+    'skills': {
+      func: generateResolver(() => 'AWS, JavaScript, Node.js, Python, C/C++, ...'),
+      description: `Lists David's skills`
+    },
+    'projects': {
+      func: generateResolver(() => 'AWS, JavaScript, Node.js, Python, C/C++, ...'),
+      description: `Lists David's projects`
+    },
+    'experience': {
+      func: generateResolver(() => 'AWS, JavaScript, Node.js, Python, C/C++, ...'),
+      description: `Lists David's experience`
+    },
+    'education': {
+      func: generateResolver(() => 'AWS, JavaScript, Node.js, Python, C/C++, ...'),
+      description: `Lists David's education`
+    },
+    'bio': {
+      func: generateResolver(() => 'AWS, JavaScript, Node.js, Python, C/C++, ...'),
+      description: `David's bio`
+    },
+    'about': {
+      func: generateResolver(() => 'AWS, JavaScript, Node.js, Python, C/C++, ...'),
+      description: `About this site`
+    },
+    'cal': {
+      func: generateResolver(() => 'AWS, JavaScript, Node.js, Python, C/C++, ...'),
+      description: `Calendar`
+    },
+    'weather': {
+      func: generateResolver(() => 'AWS, JavaScript, Node.js, Python, C/C++, ...'),
+      description: `Weather`
+    },
+    'linkedin': {
+      func: generateResolver(() => {
+        window.open('https://www.linkedin.com/in/david-skrenta-57902463/', '_blank')
+      }),
+      description: `Opens David's Linkedin`
+    },
+    'github': {
+      func: generateResolver(() => {
+        window.open('https://github.com/dskrenta', '_blank')
+      }),
+      description: `Opens David's Github`
+    },
+    'resume': {
+      func: generateResolver(() => {
+        window.open('http://harvix.com', '_blank')
+      }),
+      description: `Opens David's resume`
     }
+    
   };
 
   const files = {
@@ -92,7 +143,7 @@
       return math.evaluate(args.slice(1).join(' '));
     }
 
-    return 'No expression, usage: cal expression';
+    return 'No expression, usage: calc expression';
   }
 
   function template({ args }) {
