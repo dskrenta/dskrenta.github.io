@@ -18,6 +18,10 @@
       func: generateResolver(help),
       description: 'Lists all commands'
     },
+    'commands': {
+      func: generateResolver(help),
+      description: 'Lists all commands'
+    },
     'foo': {
       func: generateResolver(() => 'Foo!'),
       description: 'Foo!'
@@ -100,23 +104,32 @@
     },
     'linkedin': {
       func: generateResolver(() => {
-        window.open('https://www.linkedin.com/in/david-skrenta-57902463/', '_blank')
+        window.open('https://www.linkedin.com/in/david-skrenta-57902463/', '_blank');
       }),
       description: `Opens David's Linkedin`
     },
     'github': {
       func: generateResolver(() => {
-        window.open('https://github.com/dskrenta', '_blank')
+        window.open('https://github.com/dskrenta', '_blank');
       }),
       description: `Opens David's Github`
     },
     'resume': {
       func: generateResolver(() => {
-        window.open('http://harvix.com', '_blank')
+        window.open('http://harvix.com', '_blank');
       }),
       description: `Opens David's resume`
+    },
+    'mtg-decks': {
+      func: generateResolver(() => {
+        window.open('https://www.mtgsalvation.com/members/402043-neural-crashburn/decks', '_blank');
+      }),
+      description: `David's Magic: The Gaterning decks`
+    },
+    'joke': {
+      func: generateResolver(() => 'Hilarious!'),
+      description: 'Joke'
     }
-    
   };
 
   const files = {
@@ -163,11 +176,11 @@
     return 'No template specificed, Usage: template template';
   }
 
-  function ls({ inputStr, args }) {
+  function ls() {
     return Object.keys(files).map(fileKey => `${fileKey}\t`).join('');
   }
 
-  function cat({ inputStr, args }) {
+  function cat({ args }) {
     if (args.length > 1) {
       const filename = args[1];
 
