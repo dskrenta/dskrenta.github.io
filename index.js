@@ -129,6 +129,10 @@
     'joke': {
       func: generateResolver(() => 'Hilarious!'),
       description: 'Joke'
+    },
+    'interests': {
+      func: generateResolver(() => 'to come'),
+      description: `Lists David's interests`
     }
   };
 
@@ -210,6 +214,9 @@
       </table>
     `;
   }
+
+  // List commands
+  terminalContentElement.insertAdjacentHTML('beforeend', `<div>${help()}</div>`);
 
   // Refocus terminal input element on blur
   terminalInputElement.addEventListener('blur', () => {

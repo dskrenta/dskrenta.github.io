@@ -23,6 +23,7 @@ body {
 
 .terminal-content {
   word-wrap: break-word;
+  margin-bottom: 1em;
 }
 
 .terminal-table, tr, td {
@@ -50,5 +51,12 @@ a:hover {
 .header-text {
   /* font-size: 2em; */
   font-size: xx-large;
+  line-height: 1em;
+  font-weight: bold;
+}
+
+.subheader-text {
+  font-size: large;
+  line-height: 1em;
   font-weight: bold;
 }
