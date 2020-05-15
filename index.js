@@ -216,7 +216,7 @@
   }
 
   // List commands
-  terminalContentElement.insertAdjacentHTML('beforeend', `<div>${help()}</div>`);
+  terminalContentElement.insertAdjacentHTML('beforeend', help());
 
   // Refocus terminal input element on blur
   terminalInputElement.addEventListener('blur', () => {
