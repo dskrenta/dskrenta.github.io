@@ -1,9 +1,6 @@
 (() => {
   'use strict';
 
-  // Current directory
-  let currentDirectory = '/home/';
-
   // HTML elements
   const terminalFormElement = document.getElementById('terminal-form');
   const terminalInputElement = document.getElementById('terminal-input');
@@ -22,25 +19,9 @@
       func: generateResolver(help),
       description: 'Lists all commands'
     },
-    'foo': {
-      func: generateResolver(() => 'Foo!'),
-      description: 'Foo!'
-    },
     'clear': {
       func: generateResolver(() => removeChildren(terminalContentElement)),
       description: 'Clear terminal'
-    },
-    'ls': {
-      func: generateResolver(ls),
-      description: 'List files'
-    },
-    'cat': {
-      func: generateResolver(cat),
-      description: 'Reads file and writes to output'
-    },
-    'pwd': {
-      func: generateResolver(() => currentDirectory),
-      description: 'Prints working directory'
     },
     'date': {
       func: generateResolver(() => Date().toString()),
@@ -136,19 +117,6 @@
     }
   };
 
-  const files = {
-    'projects.txt': `
-      1. stuff
-      2. stuff
-      3. stuff
-    `,
-    'stuff.txt': `
-      1. stuff
-      2. stuff
-      3. stuff
-    `
-  };
-
   const templates = [
     'js-web-project',
     'webrtc-mesh',
@@ -178,22 +146,6 @@
     }
 
     return 'No template specificed, Usage: template template';
-  }
-
-  function ls() {
-    return Object.keys(files).map(fileKey => `${fileKey}\t`).join('');
-  }
-
-  function cat({ args }) {
-    if (args.length > 1) {
-      const filename = args[1];
-
-      if (filename in files) {
-        return files[filename];
-      }
-    }
-
-    return 'No file specified, Usage: cat filename';
   }
 
   function help() {
