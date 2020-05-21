@@ -72,8 +72,8 @@
       description: `David's bio`
     },
     'about': {
-      func: generateResolver(() => 'AWS, JavaScript, Node.js, Python, C/C++, ...'),
-      description: `About this site`
+      func: generateResolver(() => `This is David Skrenta's personal website. I built this site for the purposes of creating my own command line interface accessible from the web. It also serves as a portfolio site.`),
+      description: `About this site.`
     },
     'cal': {
       func: generateResolver(() => 'AWS, JavaScript, Node.js, Python, C/C++, ...'),
@@ -108,11 +108,11 @@
       description: `David's Magic: The Gaterning decks`
     },
     'joke': {
-      func: generateResolver(() => 'Hilarious!'),
+      func: generateResolver(() => jokes[Math.floor(Math.random() * jokes.length)]),
       description: 'Joke'
     },
     'interests': {
-      func: generateResolver(() => 'to come'),
+      func: generateResolver(() => 'Programming, Cycling, Swimming, Running, Survival, Agriculture, Botany, Photography, Cinema, Literature, Web Development, Driving, Powerlifting, Strength Training'),
       description: `Lists David's interests`
     }
   };
