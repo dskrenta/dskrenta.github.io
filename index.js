@@ -52,29 +52,119 @@
       description: 'Opens a random Wikipedia article'
     },
     'skills': {
-      func: generateResolver(() => 'AWS, JavaScript, Node.js, Python, C/C++, ...'),
+      func: generateResolver(() => `
+        <ul>
+          <li>
+            Unix/Linux
+          </li>
+          <li>
+            HTML, CSS, JavaScript
+          </li>
+          <li>
+            Node.js, Typescript, Python, PHP, C/C++, Java, Scala, R
+          </li>
+          <li>
+            NPM, Amazon Web Services, Microsoft Azure, Google Cloud, Firebase, Docker, SQL, NoSQL, Elasticsearch, Redis
+          </li>
+          <li>
+            React, React Native, Redux, Mobx, Riot.js, Vue.js, Apollo GraphQL, HTML5 Canvas, GraphQL, Webpack, Babel
+          </li>
+          <li>
+            WebRTC, Video Conferencing, HTTP Live Streaming, MPEG-Dash, ffmpeg, video and audio processing, video and audio live streaming
+          </li>
+          <li>
+            Finance & Economics
+          </li>
+          <li>
+            Entrepreneurship
+          </li>
+          <li>
+            Web Development & Web Marketing
+          </li>
+          <li>
+            Proficient in multiple operating systems and their respective applications (Windows, Linux, Mac OS), (Excel, Word, Powerpoint, Numbers, Pages, Keynote)
+Student Pilot
+          </li>
+        </ul>
+      `),
       description: `Lists David's skills`
     },
+    'languages': {
+      func: generateResolver(() => 'HTML, CSS, JavaScript, Node.js, Typescript, Python, PHP, C/C++, Java, Scala, R'),
+      description: 'Programming languages David knows'
+    },
     'projects': {
-      func: generateResolver(() => 'AWS, JavaScript, Node.js, Python, C/C++, ...'),
+      func: generateResolver(() => `
+        <p>
+          WebRTC-mesh — 2020
+          WebRTC-mesh is a peer to peer, end to end encrypted video conferencing template built for the purposes of enabling highly iterative development across multiple brands.
+        </p>
+
+        <p>
+          Safe Route — 2016 (TechCrunch Disrupt Hackathon 3rd place winner)
+          Choose the safest route possible to travel when you're in a new city or walking alone and want to feel more secure. Developed the frontend of the app with Riot.js and Google Maps APIs.
+        </p>
+
+        <p>
+          Octograde — 2015 — 2016
+          Programmed the front-end and the back-end for a new online test taking platform. Octograde was used in high school classrooms as an online test taking alternative to other forms of assessment and has cheating prevention capabilities.
+        </p>
+
+        <p>
+          Funzilla.tv — 2014 (TechCrunch Disrupt Hackathon)
+          Crawled popular video sharing websites to develop an entertainment feed updated daily. Developed at the 2014 TechCrunch Hackathon.
+        </p>
+
+        <p>
+          Harvix Student Search Engine — 2011 — 2013
+          Programmed the frontend and backend for a new web search engine for students. Recruited students from CodeAcademy to assist with the project. Obtained partnerships with WolframAlpha, Seattle Public Schools, and Reddit.
+        </p>
+
+        <p>
+          Lobberhead — 2009 — 2012
+          Created an online community with the purpose of sharing videos between students.
+        </p>
+      `),
       description: `Lists David's projects`
     },
     'experience': {
-      func: generateResolver(() => 'AWS, JavaScript, Node.js, Python, C/C++, ...'),
+      func: generateResolver(() => `
+<p>Co-Founder, Appearix — 2018 — 2020
+Appearix enables users to create, upload, and share public events. Appearix is used by college clubs for posting schedules and organizing meetings. Developed the AWS infrastructure for serving the application, built the GraphQL Node.js API, Elasticsearch schema, crawled top event aggregators, developed a custom email marketing system based on AWS Simple Email Service, and assisted in development of frontend React components.</p>
+
+<p>Software Engineering Consultant, Soapely — 2019
+Soapely is an on demand car washing application that services the Bay Area. Developed backend infrastructure on AWS, Node.js web server with a GraphQL API, Stripe integration for payments, Firebase authentication, and a React frontend packaged as an progressive web application.</p>
+
+<p>Software Engineer, Presearch — 2017 — 2019
+Presearch is a cryptocurrency web meta search engine. Developed a web and information search result delivery API with a websocket transport for incremental results based on speed and relevance. Search results included websites, images, videos, news, and instant information tied to the query. Additionally built an organic autocomplete server and a community driven open source package module system for the search engine.</p>
+
+<p>Software Engineer, Magnify Progress — 2017
+Magnify Progress works with activists and organizations to collect actions across a platform of progressive issues, and surface them to users who are looking for ways to act. Converted existing Redux state managers to React higher order components connected to the backend GraphQL API with Apollo Client (GraphQL client). Assisted in the development of the Magnify Progress React Native IOS and Android applications.</p>
+
+<p>Software Engineering Intern, Topix — 2016 — 2017
+Developed components for slideshow content management systems using React, Riot.js, and ECMAScript 2016 & 2017. Used AWS Elastic Beanstalk to create a Node.js image pipeline where images were processed and manipulated with graphicsmagick.</p>
+
+<p>Software Engineer, ShredFeed — 2015 (Summer)
+Developed the backend for a social network for the purpose of sharing documents, images, text, and videos. Worked with PHP and MySQL in an MVC environment to develop the website.</p>
+
+<p>Software Engineering Consultant, Redesign Mobile — 2015
+Created email and payment forms in PHP to connect freelance workers with clients.</p>
+`),
       description: `Lists David's experience`
     },
     'education': {
-      func: generateResolver(() => 'AWS, JavaScript, Node.js, Python, C/C++, ...'),
+      func: generateResolver(() => 'University of Colorado, Boulder. BA - Computer Science (2017 - 2020)'),
       description: `Lists David's education`
     },
     'bio': {
-      func: generateResolver(() => 'AWS, JavaScript, Node.js, Python, C/C++, ...'),
+      func: generateResolver(() => `David is a versatile developer with experience in various front end and back end technologies. He has developed a number of projects, including Better America, a platform to crowdsource potential legislation for government, Harvix, a research engine for students, and Octograde, a test-administering tool for teachers. He has also consulted for a number of clients and regularly participates in hackathons.`),
       description: `David's bio`
     },
     'about': {
       func: generateResolver(() => `This is David Skrenta's personal website. I built this site for the purposes of creating my own command line interface accessible from the web. It also serves as a portfolio site.`),
-      description: `About this site.`
+      description: `About this site`
     },
+    /*
     'cal': {
       func: generateResolver(() => 'AWS, JavaScript, Node.js, Python, C/C++, ...'),
       description: `Calendar`
@@ -83,6 +173,7 @@
       func: generateResolver(() => 'AWS, JavaScript, Node.js, Python, C/C++, ...'),
       description: `Weather`
     },
+    */
     'linkedin': {
       func: generateResolver(() => {
         window.open('https://www.linkedin.com/in/david-skrenta-57902463/', '_blank');
@@ -97,7 +188,7 @@
     },
     'resume': {
       func: generateResolver(() => {
-        window.open('http://harvix.com', '_blank');
+        window.open('/resume', '_blank');
       }),
       description: `Opens David's resume`
     },
@@ -112,8 +203,12 @@
       description: 'Joke'
     },
     'interests': {
-      func: generateResolver(() => 'Programming, Cycling, Swimming, Running, Survival, Agriculture, Botany, Photography, Cinema, Literature, Web Development, Driving, Powerlifting, Strength Training'),
+      func: generateResolver(() => 'Programming, Cycling, Swimming, Running, Survival, Agriculture, Botany, Photography, Cinema, Literature, Web Development, Driving, Powerlifting, Strength Training, Magic: The Gathering, Video and audio live streaming'),
       description: `Lists David's interests`
+    },
+    'email': {
+      func: generateResolver(() => 'dskrenta@gmail.com'),
+      description: `Prints David's email address`
     }
   };
 
