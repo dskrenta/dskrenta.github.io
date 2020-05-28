@@ -188,7 +188,7 @@ Created email and payment forms in PHP to connect freelance workers with clients
     },
     'resume': {
       func: generateResolver(() => {
-        window.open('/resume', '_blank');
+        window.open('/resume.pdf', '_blank');
       }),
       description: `Opens David's resume`
     },
