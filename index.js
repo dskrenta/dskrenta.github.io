@@ -51,6 +51,42 @@
       }),
       description: 'Opens a random Wikipedia article'
     },
+    'urol': {
+      func: generateResolver(() => `
+        <p>Unix rules for life</p>
+        <ul>
+          <li>
+            Keep it simple: It's cheaper and easier to carry around.
+          </li>
+          <li>
+            Do one thing at a time: Multitasking is a lie.
+          </li>
+          <li>
+            Network: You were born to connect.
+          </li>
+          <li>
+            Say what you mean; nothing is truer than the truth.
+          </li>
+          <li>
+            Hack: Trial and error is the only way we learn anything
+          </li>
+          <li>
+            Be who you are: Even a bent wire can carry a great light.
+          </li>
+          <li>
+            Use leverage; a bigger hammer isn't always the answer.
+          </li>
+          <li>
+            Use what you have: never dig diamonds with a brick of gold.
+          </li>
+          <li>
+            Have faith; all's possible, except maybe skiing through a revolving door.
+            Think ahead, but don't worship your plans; remember today is the first day of the rest of your learning experience.
+          </li>
+        </ul>
+      `),
+      description: 'Unix rules of life'
+    },
     'skills': {
       func: generateResolver(() => `
         <ul>
