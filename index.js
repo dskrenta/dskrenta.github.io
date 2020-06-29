@@ -165,27 +165,27 @@ Student Pilot
     },
     'experience': {
       func: generateResolver(() => `
-<p>Co-Founder, Appearix — 2018 — 2020
-Appearix enables users to create, upload, and share public events. Appearix is used by college clubs for posting schedules and organizing meetings. Developed the AWS infrastructure for serving the application, built the GraphQL Node.js API, Elasticsearch schema, crawled top event aggregators, developed a custom email marketing system based on AWS Simple Email Service, and assisted in development of frontend React components.</p>
+        <p>Co-Founder, Appearix — 2018 — 2020
+        Appearix enables users to create, upload, and share public events. Appearix is used by college clubs for posting schedules and organizing meetings. Developed the AWS infrastructure for serving the application, built the GraphQL Node.js API, Elasticsearch schema, crawled top event aggregators, developed a custom email marketing system based on AWS Simple Email Service, and assisted in development of frontend React components.</p>
 
-<p>Software Engineering Consultant, Soapely — 2019
-Soapely is an on demand car washing application that services the Bay Area. Developed backend infrastructure on AWS, Node.js web server with a GraphQL API, Stripe integration for payments, Firebase authentication, and a React frontend packaged as an progressive web application.</p>
+        <p>Software Engineering Consultant, Soapely — 2019
+        Soapely is an on demand car washing application that services the Bay Area. Developed backend infrastructure on AWS, Node.js web server with a GraphQL API, Stripe integration for payments, Firebase authentication, and a React frontend packaged as an progressive web application.</p>
 
-<p>Software Engineer, Presearch — 2017 — 2019
-Presearch is a cryptocurrency web meta search engine. Developed a web and information search result delivery API with a websocket transport for incremental results based on speed and relevance. Search results included websites, images, videos, news, and instant information tied to the query. Additionally built an organic autocomplete server and a community driven open source package module system for the search engine.</p>
+        <p>Software Engineer, Presearch — 2017 — 2019
+        Presearch is a cryptocurrency web meta search engine. Developed a web and information search result delivery API with a websocket transport for incremental results based on speed and relevance. Search results included websites, images, videos, news, and instant information tied to the query. Additionally built an organic autocomplete server and a community driven open source package module system for the search engine.</p>
 
-<p>Software Engineer, Magnify Progress — 2017
-Magnify Progress works with activists and organizations to collect actions across a platform of progressive issues, and surface them to users who are looking for ways to act. Converted existing Redux state managers to React higher order components connected to the backend GraphQL API with Apollo Client (GraphQL client). Assisted in the development of the Magnify Progress React Native IOS and Android applications.</p>
+        <p>Software Engineer, Magnify Progress — 2017
+        Magnify Progress works with activists and organizations to collect actions across a platform of progressive issues, and surface them to users who are looking for ways to act. Converted existing Redux state managers to React higher order components connected to the backend GraphQL API with Apollo Client (GraphQL client). Assisted in the development of the Magnify Progress React Native IOS and Android applications.</p>
 
-<p>Software Engineering Intern, Topix — 2016 — 2017
-Developed components for slideshow content management systems using React, Riot.js, and ECMAScript 2016 & 2017. Used AWS Elastic Beanstalk to create a Node.js image pipeline where images were processed and manipulated with graphicsmagick.</p>
+        <p>Software Engineering Intern, Topix — 2016 — 2017
+        Developed components for slideshow content management systems using React, Riot.js, and ECMAScript 2016 & 2017. Used AWS Elastic Beanstalk to create a Node.js image pipeline where images were processed and manipulated with graphicsmagick.</p>
 
-<p>Software Engineer, ShredFeed — 2015 (Summer)
-Developed the backend for a social network for the purpose of sharing documents, images, text, and videos. Worked with PHP and MySQL in an MVC environment to develop the website.</p>
+        <p>Software Engineer, ShredFeed — 2015 (Summer)
+        Developed the backend for a social network for the purpose of sharing documents, images, text, and videos. Worked with PHP and MySQL in an MVC environment to develop the website.</p>
 
-<p>Software Engineering Consultant, Redesign Mobile — 2015
-Created email and payment forms in PHP to connect freelance workers with clients.</p>
-`),
+        <p>Software Engineering Consultant, Redesign Mobile — 2015
+        Created email and payment forms in PHP to connect freelance workers with clients.</p>
+      `),
       description: `Lists David's experience`
     },
     'education': {
