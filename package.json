@@ -1,0 +1,27 @@
+{
+  "name": "dskrenta.github.io",
+  "version": "1.0.0",
+  "description": "David's personal website",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "bookmark": "node scripts/addBookmark.js",
+    "start": "node node_modules/nodemon/bin/nodemon.js server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dskrenta/dskrenta.github.io.git"
+  },
+  "author": "David Skrenta",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dskrenta/dskrenta.github.io/issues"
+  },
+  "homepage": "https://github.com/dskrenta/dskrenta.github.io#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  }
+}
