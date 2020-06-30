@@ -200,16 +200,6 @@ Student Pilot
       func: generateResolver(() => `This is David Skrenta's personal website. I built this site for the purposes of creating my own command line interface accessible from the web. It also serves as a portfolio site.`),
       description: `About this site`
     },
-    /*
-    'cal': {
-      func: generateResolver(() => 'AWS, JavaScript, Node.js, Python, C/C++, ...'),
-      description: `Calendar`
-    },
-    'weather': {
-      func: generateResolver(() => 'AWS, JavaScript, Node.js, Python, C/C++, ...'),
-      description: `Weather`
-    },
-    */
     'linkedin': {
       func: generateResolver(() => {
         window.open('https://www.linkedin.com/in/david-skrenta-57902463/', '_blank');
@@ -353,6 +343,7 @@ Student Pilot
     return output;
   }
 
+  // Remove all child elements given parent
   function removeChildren(parent) {
     while (parent.firstChild) {
       parent.firstChild.remove();
