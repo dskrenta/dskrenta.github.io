@@ -5,7 +5,8 @@
 ## Development
 
 ```
-$ npx http-server
+$ npm install
+$ npm start
 ```
 
-Site will be live at `http://localhost:8080`
+Site will be live at `http://localhost:3000`
