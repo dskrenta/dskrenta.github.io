@@ -186,6 +186,9 @@
       },
       'experience': {
         func: generateResolver(() => `
+          <p>Chief Technology Officer, Ready.net - 2020 - Present
+          YC S20</p>
+
           <p>Co-Founder, Appearix — 2018 — 2020
           Appearix enables users to create, upload, and share public events. Appearix is used by college clubs for posting schedules and organizing meetings. Developed the AWS infrastructure for serving the application, built the GraphQL Node.js API, Elasticsearch schema, crawled top event aggregators, developed a custom email marketing system based on AWS Simple Email Service, and assisted in development of frontend React components.</p>
 
