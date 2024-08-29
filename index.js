@@ -14,6 +14,15 @@
     const bookmarksRes = await fetch(`${window.location.href}/data/bookmarks.json`);
     const bookmarks = await bookmarksRes.json();
 
+    // Command history
+    const commandHistory = [];
+
+    // Current command index
+    let currentCommandIndex = commandHistory.length - 1;
+
+    // First command cycle
+    let firstCycle = true;
+
     // Commands supported by the system
     const commands = {
       'help': {
@@ -321,6 +330,18 @@
       // Output from command function
       const output = parse(terminalInputElement.value);
 
+      // Command input history
+      if (terminalInputElement.value !== '') {
+        // Append user input to command history
+        commandHistory.push(terminalInputElement.value);
+
+        // Reset current command index
+        currentCommandIndex = commandHistory.length - 1;
+
+        // Reset first cycle
+        firstCycle = true;
+      }
+
       // Append user input to terminal
       terminalContentElement.insertAdjacentHTML('beforeend', `<p>$ ${terminalInputElement.value}</p>`);
 
@@ -368,6 +389,49 @@
         parent.firstChild.remove();
       }
     }
+
+    // Set command index based on arrow key up (decrement) or down (increment) for command history
+    function setCommandIndex(op) {
+      // Set new index to current command index
+      let newIndex = currentCommandIndex
+
+      // If not first command cycle run increment or decrement logic else set first cycle to false
+      if (!firstCycle) {
+        // Increment or decrement newIndex based on arrow key up or down
+        if (op === 'up') {
+          newIndex += 1
+        } else if (op === 'down') {
+          newIndex -= 1
+        }
+      } else {
+        firstCycle = false;
+      }
+
+      // Keep newIndex within bounds of command history with a circular array
+      if (newIndex < 0) {
+        newIndex = commandHistory.length - 1;
+      } else if (newIndex > commandHistory.length -1) {
+        newIndex = 0;
+      }
+
+      // Return newIndex
+      return newIndex;
+    }
+
+    // Arrow key event listener for command history
+    window.addEventListener('keydown', event => {
+      // If command history has commands
+      if (commandHistory.length > 0) {
+        // If arrow key up or down get command from command history at calculated index and set terminal input to value
+        if (event.key === 'ArrowUp') {
+          currentCommandIndex = setCommandIndex('down');
+          terminalInputElement.value = commandHistory[currentCommandIndex];
+        } else if (event.key === 'ArrowDown') {
+          currentCommandIndex = setCommandIndex('up');
+          terminalInputElement.value = commandHistory[currentCommandIndex];
+        }
+      }
+    })
   }
   catch (error) {
     console.error(error);
