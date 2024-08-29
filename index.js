@@ -321,16 +321,13 @@
       // Output from command function
       const output = parse(terminalInputElement.value);
 
+      // Append user input to terminal
+      terminalContentElement.insertAdjacentHTML('beforeend', `<p>$ ${terminalInputElement.value}</p>`);
+
       // If output is defined by command function
       if (output) {
-        // Append new content to terminal
-        terminalContentElement.insertAdjacentHTML(
-          'beforeend',
-          `
-            <p>${terminalInputElement.value}</p>
-            <p>${output}</p>
-          `
-        );
+        // Append output to terminal
+        terminalContentElement.insertAdjacentHTML('beforeend', `<p>${output}</p>`);
       }
 
       // Set terminal input element value to null
