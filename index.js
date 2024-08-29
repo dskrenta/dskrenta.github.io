@@ -251,7 +251,7 @@
         description: `David's Magic: The Gaterning decks`
       },
       'joke': {
-        func: generateResolver(() => jokes[Math.floor(Math.random() * jokes.length)]),
+        func: generateResolver(() => `<div style="white-space: pre;">${jokes[Math.floor(Math.random() * jokes.length)]}</div>`),
         description: 'Joke'
       },
       'interests': {
