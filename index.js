@@ -240,7 +240,7 @@
       },
       'resume': {
         func: generateResolver(() => {
-          window.open('/resume.pdf', '_blank');
+          window.open('/david-skrenta-resume.pdf', '_blank');
         }),
         description: `Opens David's resume`
       },
